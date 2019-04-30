@@ -8,8 +8,8 @@
 #	Department of Computer Science
 #	
 #	The Website class stores attributes about a website. A website with no blocker is 
-#	referred to as "clean" and a website with a blocker is referred to as "block". This is
-#	to eliminate confusion of terms like "blocker" and "no blocker". 
+#	referred to as "clean" and a website with a blocker is referred to as "block". 
+#	This is to eliminate confusion of terms like "blocker" and "no blocker". 
 #
 #	The WebsitePair class stores changes in attributes of two website objects, with and
 #	without blockers. 
