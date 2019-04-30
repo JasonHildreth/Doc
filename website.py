@@ -1,4 +1,3 @@
-##########################################################################################
 #	Doc Package
 #	website.py 
 #	
@@ -13,7 +12,6 @@
 #
 #	The WebsitePair class stores changes in attributes of two website objects, with and
 #	without blockers. 
-##########################################################################################
 
 
 import cv2 
