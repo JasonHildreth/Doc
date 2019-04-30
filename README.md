@@ -1,8 +1,10 @@
 # Doc
 Software package to analyze faults that appear in webpages as a result of content blockers.
 
+Doc was built and used for research by Jason Hildreth under the research advisement of Dr. William C. Garrison III of the Computer Science department.
+
 ## What is Doc? 
-Doc is a package containing various tools for collecting and analyzing snapshots of data from website following a two-pass approach. In this approach, website data is collected on the same webpage at the same time, with two instances of the same browser. One with only a collection extension, and the other with a collection extension and a content blocker. 
+Doc is an open source package containing various tools for collecting and analyzing snapshots of data from website following a two-pass approach. In this approach, website data is collected on the same webpage at the same time, with two instances of the same browser. One with only a collection extension, and the other with a collection extension and a content blocker. 
 
 ## Why the name "Doc"?
 Doc is named as a (punny) metaphor for how a medical doctor diagnoses diseases. Typically, a doctor will examine a patient, take lab samples or document vital signs, and then diagnose an illness or disease. Doc works by examining a website, taking data points from that website, and then attempts to diagnose its faults that resulted from a content blocker. The various tools of Doc are named as metaphors to the field of medicine.
@@ -24,3 +26,8 @@ Anaconda is optional, but allows for much simpler installation of the OpenCV and
 
 ## Initial Setup
 This repository comes with all files necesasary to execute Doc. The user is only responsible for making sure they have the above the dependencies and modifying the appropriate configurations. 
+
+1. Steps here
+
+## Using Doc
+Since this package was written for research purposes, it has multiple scripts for collecting data, formatting data, and diagnosing data. It is designed this way to allow for additional fault detectors to be built in. An included shell script allows a single website to be analyzed through multiple scripts as a demonstration. 
