@@ -4,8 +4,8 @@ Software package to analyze faults that appear in webpages as a result of conten
 ## What is Doc? 
 Doc is a package containing various tools for collecting and analyzing snapshots of data from website following a two-pass approach. In this approach, website data is collected on the same webpage at the same time, with two instances of the same browser. One with only a collection extension, and the other with a collection extension and a content blocker. 
 
-## Why is it called Doc?
-Doc is named as a (punny) metaphor for how a medical doctor diagnoses diseases. Typically, a doctor will examine a patient, take lab samples or document vital signs, and then diagnose an illness or disease. Doc works by examining a website, taking data points from that website, and then attempts to diagnose its faults that resulted from a content blocker. 
+## Why the name "Doc"?
+Doc is named as a (punny) metaphor for how a medical doctor diagnoses diseases. Typically, a doctor will examine a patient, take lab samples or document vital signs, and then diagnose an illness or disease. Doc works by examining a website, taking data points from that website, and then attempts to diagnose its faults that resulted from a content blocker. The various tools of Doc are named as metaphors to the field of medicine.
 
 ## What is the purpose of Doc?
 Content blockers such as AdBlock Plus, uBlock Origin, NoScript, etc, attempt to allow us to browse a website and maintain some privacy by blocking invasive analytics and tracking scripts. The more extreme blockers, should one choose to employ, can block Javascript across the board, eliminating most threats to a person's system and privacy. 
@@ -15,8 +15,12 @@ Content blockers have the tendency to make a website unusable; especially if the
 ## Dependencies and Requirements
 - Google Chrome
 - Chrome Driver
-- Selenium
 - Python 3
+- Selenium for Python 3
+- OpenCV for Python 3
+- NumPy for Python 3
+
+Anaconda is optional, but allows for much simpler installation of the OpenCV and NumPy libraries. 
 
 ## Initial Setup
-1. Placeholder
+This repository comes with all files necesasary to execute Doc. The user is only responsible for making sure they have the above the dependencies and modifying the appropriate configurations. 
