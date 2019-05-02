@@ -48,7 +48,7 @@ This repository comes with all files necesasary to execute Doc. The user is only
 
 1. Ensure Chromedriver is in the correct place for your system variables. 
 2. Create two Chrome profiles, one for the test with no blocker, and one with. 
-3. Open ```config_template.py``` and store the working paths of these Chrome profiles inside this template. Chrome profile paths can be found by navigating to ```Chrome://version``` within Chrome. 
+3. Open ```config_template.py``` and store the working paths of these Chrome profiles inside this template. Chrome profile paths can be found by navigating to ```Chrome://version``` within Chrome. Save as ```config.py```.
 4. Run the ```build_profiles.py``` script and follow the instructions. This will provide the package with two profiles that are configured properly for the two-pass analysis technique. 
 
 
