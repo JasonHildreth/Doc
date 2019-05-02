@@ -59,3 +59,6 @@ A typical examination will be a run of Biopsy. Diagnose can then be used to test
 
 Doc currently supports detection of the following website faults:
 - Page is blank when using NoScript or Scriptsafe. 
+
+Works in progress:
+- Audio Players not visible when using NoScript or Scriptsafe. 

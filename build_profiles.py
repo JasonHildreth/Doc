@@ -1,19 +1,24 @@
-# Execute in Python3 
-# Execution: python build_profiles.py
-#			 python3 build_profiles.py
+#	Doc Package
+#	build_profiles.py
+#	
+#	Author: Jason Hildreth
+#	Research Advisor: Dr. William C. Garrison III
+#	University of Pittsburgh
+#	Department of Computer Science
+#
+# 	This script is used to build profiles for the two-pass analysis technique. 
 
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+
 
 try:
 	import config as user
 except ImportError:
 	raise ImportError("\n\nProper config.py file not detected. See README.md\n")
 
-
 PROFILE_PATH_PREFIX = "user-data-dir= "
-
 
 profile_path_clean = PROFILE_PATH_PREFIX + user.PATH_TO_PROFILE_CLEAN
 profile_path_block = PROFILE_PATH_PREFIX + user.PATH_TO_PROFILE_BLOCK
