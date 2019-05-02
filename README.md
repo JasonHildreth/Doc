@@ -24,6 +24,25 @@ Content blockers have the tendency to make a website unusable; especially if the
 
 Anaconda is optional, but allows for much simpler installation of the OpenCV and NumPy libraries. 
 
+## Doc Components
+Doc is built from three primary utilities along with smaller utilities that are more literal in name than the primary metaphorical counterparts. 
+
+### Scalpel
+Scalpel is the blade of Doc. It works by "opening up" Chrome and allowing access to some inner sections. Scalpel is a Chrome extension written in Javascript. For security purposes, Javascript has no I/O. To get around this limitation, Scalpel places data that could be useful in research into the ```console.error()``` log. 
+
+### Biopsy
+Biopsy is the sample collection of Doc. While Biopsy's name is hidden as a collection tool, it actually operates Chrome through automation. Biopsy can not work with Scalpel, and Scalpel provides no tangible benefit without Biopsy. Biopsy is written in Python and makes use of the Selenium browser automation library. 
+
+### Diagnose
+Diagnose is the detector of Doc. It works by taking in samples created by Biopsy, and can output a detected fault. Diagnose is written in Python and uses the OpenCV and NumPy libraries. 
+
+#### Tools
+- ```text_processing_tools.py``` contains constants and functions use to manage and process data coming out of the ```console.error()``` log and transform them into more user-friendly data. 
+- ```export_to_csv.py``` exports either a single website's parameters as a CSV string, or an entire manifest of data. If executed with no command line arguments, the entire manifest will be exported as a CSV string. If executed with a website string, it will export that single website as a CSV string. 
+- ```config.py``` contains the necessary paths for Selenium Chrome profiles and other system values. 
+- ```manifest.py``` contains a list that stores websites.  
+
+
 ## Initial Setup
 This repository comes with all files necesasary to execute Doc. The user is only responsible for making sure they have the above the dependencies and modifying the appropriate configurations. 
 
