@@ -1,5 +1,12 @@
+/**
+ * 	@author Jason Hildreth
+ *	University of Pittsburgh
+ *	Department of Computer Science
+ *	Research Advisor: Dr. William C. Garrison III
+ */
 
 var requestsArray = []; // Dynamic array to store the HTTP requests
+
 
 /* Adds a listener to the onBeforeRequest event and stores a copy of
    the request to the requests array */
@@ -8,18 +15,11 @@ chrome.webRequest.onBeforeRequest.addListener( function(info) {
 	requestsArray.push(info.url);
 }, { urls: ["<all_urls>"] },[/* no options */]);
 
+
 /* Adds a listener to the onConnect event, which signals the page has
    completed, and sends copies of the DOM and requests to the content
 	 script */
 chrome.runtime.onConnect.addListener(function(port) {
-	/*
-	// Process the DOM into a message and send to the content script
-	port.postMessage({message: "_BEGIN_DOM_"});
-	console.log(JSON.stringify(domJSON.toJSON(document.body)))
-	port.postMessage({message: "" + JSON.stringify(domJSON.toJSON(document.body))});
-	port.postMessage({message: "_END_DOM_"});
-	*/
-
 	// Traverse the requests array and send to the content script
 	var i = 0;
 	var length = requestsArray.length;
