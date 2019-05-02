@@ -46,7 +46,16 @@ Diagnose is the detector of Doc. It works by taking in samples created by Biopsy
 ## Initial Setup
 This repository comes with all files necesasary to execute Doc. The user is only responsible for making sure they have the above the dependencies and modifying the appropriate configurations. 
 
-1. Steps here
+1. Ensure Chromedriver is in the correct place for your system variables. 
+2. Create two Chrome profiles, one for the test with no blocker, and one with. 
+3. Open ```config_template.py``` and store the working paths of these Chrome profiles inside this template. Chrome profile paths can be found by navigating to ```Chrome://version``` within Chrome. 
+4. Run the ```build_profiles.py``` script and follow the instructions. This will provide the package with two profiles that are configured properly for the two-pass analysis technique. 
+
 
 ## Using Doc
-Since this package was written for research purposes, it has multiple scripts for collecting data, formatting data, and diagnosing data. It is designed this way to allow for additional fault detectors to be built in. An included shell script allows a single website to be analyzed through multiple scripts as a demonstration. 
+Since this package was written for research purposes, it has multiple scripts for collecting data, formatting data, and diagnosing data. It is designed this way to allow for additional fault detectors to be built in. 
+
+A typical examination will be a run of Biopsy. Diagnose can then be used to test if detection heuristics are accurate or the data can be exported CSV for examination. 
+
+Doc currently supports detection of the following website faults:
+- Page is blank when using NoScript or Scriptsafe. 
