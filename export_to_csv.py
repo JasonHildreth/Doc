@@ -72,7 +72,7 @@ def process_manifest():
 	"""Processes all websites in the manifest.
 	"""
 	m = manifest.MANIFEST
-	for i in range(0, length(m)):
+	for i in range(0, len(m)):
 		entry = m[i]
 
 		txt_clean = FILEPATH_PREFIX + entry[0] + FILEPATH_TEXT_SUFFIX_CLEAN
@@ -93,11 +93,13 @@ def process_manifest():
 def main():
 	argument_total = len(sys.argv)
 	if argument_total == 1:
-		# process all websites
+		process_manifest()
 	elif argument_total == 2:
-		
+		process_single_website(sys.argv[1])
 	else:
-		# exit 
+		print("Invalid command line arguments.")
+		print("Usage: python3 export_to_csv.py <WEBSITE_URL> ")
+		exit()
 	
 
 if __name__ == "__main__":
