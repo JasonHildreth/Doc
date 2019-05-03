@@ -128,7 +128,8 @@ class Website:
 		
 		
 	def get_white_pixels(self):
-		"""Returns the number of white pixels of the website."""
+		"""Returns the number of white pixels of the website.
+		"""
 		return self.white_pixels
 		
 		
