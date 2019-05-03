@@ -1,4 +1,3 @@
-##########################################################################################
 #	Doc Package
 #	export_to_csv.py
 #
@@ -19,10 +18,6 @@
 #	
 #	The export_to_csv tool exports parameters of Website and WebsitePair objects in 
 #	comma-separated-values format for analysis. 
-# 	
-#	
-#	[licensing information here]
-##########################################################################################
 
 import sys
 import manifest as manifest
@@ -58,12 +53,49 @@ def get_csv_string(clean, block, pair):
 	return csv
 
 
+def process_single_website(website_url):
+	"""Processes a single website and exports to csv string.
+	"""
+	txt_clean = FILEPATH_PREFIX + website_url + FILEPATH_TEXT_SUFFIX_CLEAN
+	txt_block = FILEPATH_PREFIX + website_url + FILEPATH_IMAGE_SUFFIX_BLOCK
+	img_clean = FILEPATH_PREFIX + website_url + FILEPATH_IMAGE_SUFFIX_CLEAN
+	img_block = FILEPATH_PREFIX + website_url + FILEPATH_IMAGE_SUFFIX_BLOCK
+
+	website_clean = Website(txt_clean, img_clean, "clean")
+	website_block = Website(txt_block, img_block, "block")
+	pair = WebsitePair(website_clean, website_block)
+
+	print(get_csv_header(website_clean, website_block, pair))
+
+
+def process_manifest():
+	"""Processes all websites in the manifest.
+	"""
+	m = manifest.MANIFEST
+	for i in range(0, length(m)):
+		entry = m[i]
+
+		txt_clean = FILEPATH_PREFIX + entry[0] + FILEPATH_TEXT_SUFFIX_CLEAN
+		txt_block = FILEPATH_PREFIX + entry[0] + FILEPATH_IMAGE_SUFFIX_BLOCK
+		img_clean = FILEPATH_PREFIX + entry[0] + FILEPATH_IMAGE_SUFFIX_CLEAN
+		img_block = FILEPATH_PREFIX + entry[0] + FILEPATH_IMAGE_SUFFIX_BLOCK
+
+		website_clean = Website(txt_clean, img_clean, "clean")
+		website_block = Website(txt_block, img_block, "block")
+		pair = WebsitePair(website_clean, website_block)
+
+		if i == 0:
+			print(get_csv_header(website_clean, website_block, pair))
+
+		print(get_csv_string(website_clean, website_block, pair))
+
+
 def main():
 	argument_total = len(sys.argv)
 	if argument_total == 1:
 		# process all websites
 	elif argument_total == 2:
-		# process single website
+		
 	else:
 		# exit 
 	
