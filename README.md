@@ -1,7 +1,7 @@
 # Doc
 Software package to analyze faults that appear in webpages as a result of content blockers.
 
-Doc was built and used for research by Jason Hildreth under the research advisement of Dr. William C. Garrison III of the Computer Science department.
+Doc was built and used for research by Jason Hildreth under the research advisement of Dr. Garrison of the Computer Science department at the University of Pittsburgh. 
 
 ## What is Doc? 
 Doc is an open source package containing various tools for collecting and analyzing snapshots of data from website following a two-pass approach. In this approach, website data is collected on the same webpage at the same time, with two instances of the same browser. One with only a collection extension, and the other with a collection extension and a content blocker. 
