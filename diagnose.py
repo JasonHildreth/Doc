@@ -16,7 +16,7 @@ import sys
 from website import Website 
 from website import WebsitePair
 
-
+# @TODO This heuristic needs re-confirmed with the Selenium and Chromedriver updates 05/02/19
 def page_is_blank(clean, block, pair):
 	"""Determines if a website page is blank. 
 		Return:
